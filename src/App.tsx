@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
 
-function App() {
+const ScSlider = styled.div`
+  border-radius: 3px;
+  background: #dddddd;
+  height: 15px;
+`
+
+const ScThumb = styled.div`
+  width: 10px;
+  height: 25px;
+  background: #823eb7;
+  border-radius: 3px;
+  opacity: 0.5;
+  cursor: pointer;
+  position: relative;
+  top: -5px;
+`
+
+function Slider() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <ScSlider>
+        <ScThumb />
+      </ScSlider>
+    </>
+  )
 }
 
-export default App;
+function App() {
+  return <Slider />
+}
+
+export { App }
