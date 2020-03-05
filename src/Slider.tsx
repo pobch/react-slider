@@ -102,7 +102,7 @@ function Slider({ initial = 0, max = 100, onChange }: Props) {
         <strong ref={currentRef}></strong>/{max}
       </ScSliderHeader>
       <ScSlider ref={sliderRef}>
-        <ScThumb ref={thumbRef} onMouseDown={handleMouseDown} />
+        <ScThumb ref={thumbRef} onMouseDown={handleMouseDown} data-testid="thumb" />
       </ScSlider>
     </>
   )
